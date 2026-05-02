@@ -38,7 +38,7 @@ for page in range(2):  # 先试 2 页
         safe_title = title.replace(":", "：").replace("/", "／").replace("?", "？")
         filename = f"posters/{safe_title}.jpg"
 
-        # 下载图片
+        # 下载图片，保存到文件夹
         try:
             img_data = requests.get(img_url, headers=headers, timeout=10).content
             with open(filename, "wb") as f:  # wb = 二进制写入
