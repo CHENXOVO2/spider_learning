@@ -1,6 +1,6 @@
 """
 第五课：异常处理 —— 让爬虫更健壮
-现实世界的网站会：超时、断连、返回空数据、结构变化
+现实的网站会超时、断连、返回空数据、结构变化
 """
 
 import requests
@@ -25,7 +25,7 @@ def safe_get(url, retries=3):
             if response.status_code == 200:
                 return response
             elif response.status_code == 429:
-                # 豆瓣/知乎等常用 429 表示「你爬太快了」
+                # 豆瓣/知乎等常用网站429 表示「你爬太快了」
                 wait = 10 * (attempt + 1)
                 print(f"  触发频率限制，等待 {wait} 秒后重试...")
                 time.sleep(wait)
