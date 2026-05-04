@@ -9,7 +9,7 @@ import requests
 print("=== 当前天气 ===")
 resp = requests.get("https://wttr.in/Beijing?format=j1", timeout=10)
 weather = resp.json()  # .json() 直接把 JSON 字符串变成 Python 字典
-
+#输出
 current = weather["current_condition"][0]
 print(f"  城市: {weather['nearest_area'][0]['areaName'][0]['value']}")
 print(f"  温度: {current['temp_C']}°C")
