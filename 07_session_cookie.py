@@ -40,10 +40,11 @@ login_resp = login_session.post(
 )
 print(f"登录响应状态码: {login_resp.status_code}")
 
-# 之后用同一个 session 去请求需要登录的页面
+# 之后用同一个 session 去请求需要登录的页面：
 profile_resp = login_session.get(
     "https://httpbin.org/get",
     headers={"User-Agent": "Mozilla/5.0"}
 )
+
 print(f"访问个人页状态码: {profile_resp.status_code}")
 print("登录后 session 中记录的 cookies:", login_session.cookies.get_dict())
