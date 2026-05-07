@@ -51,7 +51,7 @@ while page_url:
 
 print(f"\n共爬取 {len(all_quotes)} 条名言，保存到文件...")
 
-# 保存为 CSV 文件（可以用 Excel/WPS 打开）
+# 保存为 CSV 文件
 with open("quotes.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.DictWriter(f, fieldnames=["text", "author", "tags"])
     writer.writeheader()
