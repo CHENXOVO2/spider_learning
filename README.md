@@ -1,5 +1,5 @@
 # spider_learning
-python爬虫学习代码
+python爬虫
 
 # 使用方式
 python运行代码
