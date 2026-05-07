@@ -13,7 +13,7 @@ response = requests.get(url)
 # 状态码：200 表示成功
 print(f"状态码: {response.status_code}")
 
-# 打印网页的前 500 个字符，看看长什么样
+# 打印网页的前 500 个字符
 print("=" * 50)
 print("网页内容（前 500 字符）:")
 print("=" * 50)
